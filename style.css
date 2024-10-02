@@ -15,6 +15,9 @@ main {
 h1{
   text-align: center;
 }
+ul {
+  list-style-type: none;
+}
 .search-bar {
   background-color: #f9f7fe;
   border: none;
@@ -36,12 +39,15 @@ h1{
 }
 .currentInfo {
   display: flex;
+  justify-content: space-between;
 }
 .days {
   display: flex;
-  justify-content: flex-start;
-  list-style-type: none;
+  justify-content: space-between;
 }
 .current-temp {
   display: flex;
+}
+.degree-temp-type {
+  font-size: 15px;
 }
