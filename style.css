@@ -14,6 +14,10 @@ main {
 }
 h1{
   text-align: center;
+
+ul {
+list-style: none;
+}
 }
 .search-bar {
   background-color: #f9f7fe;
@@ -33,4 +37,9 @@ h1{
   border: none;
   padding: 5px;
   font-size: 20px;
+}
+.days {
+  display: flex;
+  flex-direction: row;
+
 }
