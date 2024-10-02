@@ -14,10 +14,6 @@ main {
 }
 h1{
   text-align: center;
-
-ul {
-list-style: none;
-}
 }
 .search-bar {
   background-color: #f9f7fe;
@@ -38,8 +34,14 @@ list-style: none;
   padding: 5px;
   font-size: 20px;
 }
+.currentInfo {
+  display: flex;
+}
 .days {
   display: flex;
-  flex-direction: row;
-
+  justify-content: flex-start;
+  list-style-type: none;
+}
+.current-temp {
+  display: flex;
 }
