@@ -29,6 +29,9 @@ ul {
   margin: 0 auto;
   display: block;
 }
+footer {
+  text-align: center;
+}
 .search-button {
   margin: auto;
   display: block;
@@ -47,7 +50,7 @@ ul {
 }
 .days {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .current-temp {
   display: flex;
