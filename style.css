@@ -15,8 +15,22 @@ main {
 h1{
   text-align: center;
 }
-.search {
+.search-bar {
+  background-color: #f9f7fe;
+  border: none;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  padding: 10px;
+  width: 30%;
+  border-radius: 6px;
   margin: 0 auto;
   display: block;
-  text-align: center;
+}
+.search-button {
+  margin: auto;
+  display: block;
+  background-color: #bbe4e9;
+  border: none;
+  padding: 5px;
+  font-size: 20px;
 }
