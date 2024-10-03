@@ -58,3 +58,12 @@ footer {
 .degree-temp-type {
   font-size: 15px;
 }
+#humidity {
+  color: #5493B6;
+}
+#wind {
+  color: #5493B6;
+}
+#degree-number {
+  color: #5493B6
+}

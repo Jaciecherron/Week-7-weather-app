@@ -1,6 +1,8 @@
 function tempInfo (response){
   let tempratureElement = document.querySelector ("#degree-number");
   tempratureElement.innerHTML = Math.round(response.data.temperature.current);
+  let humidityElement = document.querySelector("#humidity")
+  humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
 }
 
 function searchSubmit (event) {
