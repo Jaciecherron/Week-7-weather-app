@@ -3,6 +3,10 @@ function tempInfo (response){
   tempratureElement.innerHTML = Math.round(response.data.temperature.current);
   let humidityElement = document.querySelector("#humidity")
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
+  let windElement = document.querySelector ("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let iconElement = document.querySelector ("#weather-image")
+  iconElement.innerHTML = response.data.condition.icon;
 }
 
 function searchSubmit (event) {

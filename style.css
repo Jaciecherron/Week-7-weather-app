@@ -60,10 +60,13 @@ footer {
 }
 #humidity {
   color: #5493B6;
+  font-weight: 400;
 }
 #wind {
   color: #5493B6;
+  font-weight: 400;
 }
 #degree-number {
-  color: #5493B6
+  color: #5493B6;
+  font-weight:400;
 }
