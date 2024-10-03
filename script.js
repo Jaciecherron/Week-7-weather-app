@@ -24,4 +24,4 @@ let day= days[now.getDay()];
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let month = months [now.getMonth()];
 let months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
-date.innerHTML = `${day} ${month} ${day}, ${hour}:${minutes}`;
+date.innerHTML = `${day} ${month}, ${hour}:${minutes}`;
