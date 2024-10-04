@@ -5,13 +5,8 @@ function tempInfo (response){
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   let windElement = document.querySelector ("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  let iconElement = document.querySelector ("#weather-image img");
-  fetch (searchCity)
-    .then(response => response.data.condition.icon_url)
-    .then (data => {
-      let iconURL = `http://shecodes-assets.s3.amazonaws.com/api/weather/icons${data.weather[0].icon}.png`;
-    })
-    weatherIcon.setAttribute("src", iconURL);
+  let iconElement = document.querySelector ("#weather-image");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-temperature-icon" />`;
 
 }
 
@@ -23,16 +18,35 @@ function searchSubmit (event) {
  searchCity(searchInput.value);
 }
 
-function forecastTemp (forecast) {
+function forecastTemp (city) {
   let apiKey = "9f3o6449dc310bta33096fd85b205350";
   let apiURL =
-    `https://api.shecodes.io/weather/v1/forecast?&{city}&key=${apiKey}=imperial`;
-}
+    `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}=imperial`;
+  axios(apiUrl).then(displayForecast);
+  }
+function displayForcast(response){
+  let forcastElement = document.querySelector("#forecast")
+  let forcastHtml = "";
 
-function tempForecast (response) {
-  let searchForecast = document.querySelector("#days");
-  searchForecast.innerHTML = Math.round (response.data.temperature.day)
-}
+  response.data.daily.forEach(function (day, index)) {
+    if (index <5 ){
+      forecastHtml =
+      forecastHtml +
+
+      <div class="weather-forecast-day">
+      <div class="weather-forecast-date">${formatDay(day.time)}</div>
+      <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
+      <div class="weather-forecast-temperatures">
+        <div class="weather-forecast-temperature">
+          <strong>${Math.round(day.temperature.maximum)}°</strong></div>
+            <div class="weather-forecast-temperature">${Math.round(
+              day.temperature.minimum
+            )°</div>
+            </div>
+            </div>
+            ;
+             }
+            }};
 
 function searchCity (city) {
  let apiKey = "9f3o6449dc310bta33096fd85b205350";

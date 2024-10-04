@@ -48,10 +48,6 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-#days {
-  display: flex;
-  justify-content: space-around;
-}
 .current-temp {
   display: flex;
 }
