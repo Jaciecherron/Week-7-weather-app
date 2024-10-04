@@ -5,8 +5,14 @@ function tempInfo (response){
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   let windElement = document.querySelector ("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  let iconElement = document.querySelector ("#weather-image")
-  iconElement.innerHTML = response.data.condition.icon;
+  let iconElement = document.querySelector ("#weather-image img");
+  fetch (searchCity)
+    .then(response => response.data.condition.icon_url)
+    .then (data => {
+      let iconURL = `http://shecodes-assets.s3.amazonaws.com/api/weather/icons${data.weather[0].icon}.png`;
+    })
+    weatherIcon.setAttribute("src", iconURL);
+
 }
 
 function searchSubmit (event) {
@@ -28,7 +34,10 @@ searchElement.addEventListener("submit", searchSubmit)
 
 let now = new Date ();
 let date = document.querySelector ("#dateTime");
-let currenteDate = now.getDate();
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+let currentDate = now.getDate();
+
 let hour = now.getHours();
 if (hour <10){
   hour = `0${hour}`;
@@ -37,8 +46,7 @@ let minutes = now.getMinutes();
 if (minutes <10) {
   minutes = `0${minutes}`;
 }
-let day= days[now.getDay()];
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let month = months [now.getMonth()];
-let months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
-date.innerHTML = `${day} ${month}, ${hour}:${minutes}`;
+let day = days[now.getDay()];
+let month = months[now.getMonth()];
+date.innerHTML = `${day} ${month} ${currentDate}, ${hour}:${minutes}`;
+
