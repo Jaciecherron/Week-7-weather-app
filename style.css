@@ -48,7 +48,7 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-.days {
+#days {
   display: flex;
   justify-content: space-around;
 }

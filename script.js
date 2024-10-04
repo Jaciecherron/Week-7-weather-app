@@ -23,6 +23,17 @@ function searchSubmit (event) {
  searchCity(searchInput.value);
 }
 
+function forecastTemp (forecast) {
+  let apiKey = "9f3o6449dc310bta33096fd85b205350";
+  let apiURL =
+    `https://api.shecodes.io/weather/v1/forecast?&{city}&key=${apiKey}=imperial`;
+}
+
+function tempForecast (response) {
+  let searchForecast = document.querySelector("#days");
+  searchForecast.innerHTML = Math.round (response.data.temperature.day)
+}
+
 function searchCity (city) {
  let apiKey = "9f3o6449dc310bta33096fd85b205350";
  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
