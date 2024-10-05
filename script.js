@@ -5,6 +5,8 @@ function tempInfo(response) {
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  let conditionElement = document.querySelector("#condition");
+  conditionElement.innerHTML = (response.data.condition.description);
   let iconElement = document.querySelector("#weather-image");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-temperature-icon" />`;
 }
@@ -56,8 +58,6 @@ function searchCity(city) {
 
 let searchElement = document.querySelector("#search-form");
 searchElement.addEventListener("submit", searchSubmit);
-
-// Date and Time display
 let now = new Date();
 let date = document.querySelector("#dateTime");
 let days = [
