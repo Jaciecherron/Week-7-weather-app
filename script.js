@@ -26,7 +26,6 @@ function forecastTemp(city) {
 }
 
 function displayForecast(response) {
-  let forecastElement = document.querySelector("#forecast");
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
@@ -46,7 +45,7 @@ function displayForecast(response) {
         </div>`;
     }
   });
-
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
