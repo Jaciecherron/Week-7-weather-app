@@ -9,6 +9,8 @@ function tempInfo(response) {
   conditionElement.innerHTML = (response.data.condition.description);
   let iconElement = document.querySelector("#weather-image");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-temperature-icon" />`;
+  console.log(response.data);
+  forecastTemp(response.data.city);
 }
 
 function searchSubmit(event) {
