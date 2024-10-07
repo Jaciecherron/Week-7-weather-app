@@ -77,3 +77,13 @@ footer {
 #condition {
   text-align: center;
 }
+
+#forecast {
+  display: flex;
+  justify-content: center;
+  color: #53a8b6
+}
+
+.night {
+  color: #B67278;
+}
