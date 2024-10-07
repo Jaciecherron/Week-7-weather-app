@@ -19,6 +19,9 @@ main {
 h1, h2{
   text-align: center;
 }
+h5 {
+  color: #B67278;
+}
 ul {
   list-style-type: none;
 }
