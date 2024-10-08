@@ -5,7 +5,6 @@ body {
   background-attachment: fixed;
   background-position: center;
    font-family: "Playwrite DE Grund", cursive;
-  font-weight: 100;
   font-style: normal;
 }
 main {
@@ -53,13 +52,15 @@ footer {
 }
 .currentInfo {
   display: flex;
-  justify-content: space-between;
 }
 .current-temp {
   display: flex;
 }
-.degree-temp-type {
-  font-size: 15px;
+#degree-temp-type {
+  font-size: 30px;
+  position: relative;
+  top: -30px;
+  left: 300px;
 }
 #humidity {
   color: #B67278;
@@ -72,6 +73,10 @@ footer {
 #degree-number {
   color: #B67278;
   font-weight:400;
+  font-size: 30px;
+  position: relative;
+  top: -30px;
+  left: 300px;
 }
 
 #condition {
@@ -86,4 +91,9 @@ footer {
 
 .night {
   color: #B67278;
+}
+#degree {
+  position: relative;
+  top: -30px;
+  left: 300px;
 }
