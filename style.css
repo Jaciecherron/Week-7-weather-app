@@ -97,3 +97,8 @@ footer {
   top: -30px;
   left: 300px;
 }
+
+.weather-forecast-icon {
+  position: relative;
+  left: -25px;
+}
